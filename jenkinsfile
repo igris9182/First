@@ -1,0 +1,28 @@
+pipeline
+{  
+  agent any
+  stages
+  {
+    stage('clone')
+    {
+      steps
+      {
+        git 'https://github.com/igris9182/First.git'
+      }
+      stage('build')
+      {
+        steps
+        {
+          sh 'javac First.java'
+        }
+      }
+      stage('run')
+      {
+        steps
+        {
+          sh 'java First'
+        }
+      }
+    }
+  }
+}
