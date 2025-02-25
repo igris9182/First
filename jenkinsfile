@@ -9,19 +9,19 @@ pipeline
       {
         git 'https://github.com/igris9182/First.git'
       }
-      stage('build')
+    }
+    stage('build')
+    {
+      steps
       {
-        steps
-        {
-          sh 'javac First.java'
-        }
+        sh 'javac First.java'
       }
-      stage('run')
+    }
+    stage('run')
+    {
+      steps
       {
-        steps
-        {
-          sh 'java First'
-        }
+        sh 'java First'
       }
     }
   }
